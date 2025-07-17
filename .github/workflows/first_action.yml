@@ -1,6 +1,8 @@
 name: Bienvenida
 
-on: [pull_request]
+on:
+  pull_request:
+    types: [opened]
 
 jobs: 
   welcome:
@@ -13,3 +15,10 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: "Sorry, something went wrong, try again..."
         pr-message: "PR merged!"
+      
+  auto-approve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hmarr/auto-approve-action@v3
+        with:
+          github-token: ${{ secrets.OP }}
