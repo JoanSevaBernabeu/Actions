@@ -9,7 +9,7 @@ jobs:
       pull-request: write
     steps:
     - uses: actions/first-interacion@v1
-    with:
-      repo-token: ${{ secrets.GITHUB_TOKEN }}
-      issue-message: "Sorry, something went wrong, try again..."
-      pr-message: "PR merged!"
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: "Sorry, something went wrong, try again..."
+        pr-message: "PR merged!"
