@@ -6,7 +6,7 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     permissions:
-      pull-request: write
+      pull-requests: write
     steps:
     - uses: actions/first-interacion@v1
       with:
