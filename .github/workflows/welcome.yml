@@ -3,9 +3,9 @@ name: Bienvenida
 on:
   workflow_call:
     inputs:
-      name: token
-      required: true
-      type: string
+      token:
+        required: true
+        type: string
 
 jobs: 
   welcome:
