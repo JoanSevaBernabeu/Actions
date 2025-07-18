@@ -6,6 +6,6 @@ on:
 
 jobs:
   caller:
-    uses: ./.github/workflows/templates/welcome.yml
+    uses: ./.github/workflows/welcome.yml
     with:
       token: ${{ secrets.GITHUB_TOKEN }}
