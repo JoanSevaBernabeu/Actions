@@ -1,0 +1,21 @@
+name: Bienvenida
+
+on:
+  workflow_call:
+    inputs:
+      token:
+        required: true
+        type: string
+
+jobs: 
+  welcome:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ inputs.token }}
+        issue-message: "Sorry, something went wrong, try again..."
+    
+      
