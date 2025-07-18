@@ -1,0 +1,11 @@
+name: Orquestador
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  caller:
+    uses: ./templates/welcome.yml
+    with:
+      token: ${{ secrets.GITHUB_TOKEN }}
